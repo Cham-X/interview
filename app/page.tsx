@@ -10,7 +10,7 @@ export default function Home() {
         <h1>Basic Concepts</h1>
         <ol>
           <li>
-            <Link href={"/answerone"}>Explain the difference between state and props in React.
+            <Link href={"/answerone"}> Answer to --> Explain the difference between state and props in React.
             Provide an example of how each is used.
             </Link>
           </li>
