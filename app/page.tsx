@@ -29,6 +29,26 @@ export default function Home() {
                             Answer to  → Question 3: Create a simple React component that fetches and displays data from an API. Use hooks like useState and useEffect. 
             </Link>
           </li>
+          <li>
+            <Link href={"/answerfour"}>
+                            Answer to  → Question 4: Explain the concept of lifting state up in React. Provide an example where this is necessary. 
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className="py-4">
+        <h1 className="text-2xl">  Advanced Concepts</h1>
+        <ul>
+          <li>
+            <Link href={"/answerfive"}>
+                            Answer to  → Question 5: Describe the Context API and provide an example of how it can manage the global state in a React application. 
+            </Link>
+          </li>
+          <li>
+            <Link href={"/answersix"}>
+                            Answer to  → Question 6: Explain the concept of React Portals. Provide an example of a scenario where React Portals would be useful. 
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
