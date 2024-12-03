@@ -4,7 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col items-start justify-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-2xl py-4">HELLO</h1>
+        <p className="sm:text-3xl text-2xl font-medium text-white font-generalsans text-center py-4">
+                    Hello, I am Shamsudeen <span className="waving-hand">👋</span>
+                </p>
       <p>Please click on the questions below to view their corresponding answers:</p>
       <div className="py-4">
         <h1 className="text-2xl">Basic Concepts</h1>
@@ -50,6 +52,12 @@ export default function Home() {
             </Link>
           </li>
         </ul>
+      </div>
+      <div>
+        <h1 className="text-2xl">   Practical Task</h1>
+        <Link href={"/task"}>
+          Task: Build a small React application
+        </Link>
       </div>
     </div>
   );
