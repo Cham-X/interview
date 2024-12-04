@@ -24,7 +24,16 @@ const page = () => {
     else alert('Form Submitted');
   };
 
+  //creating a list that can be filtered based on user input 
+   const [query, setQuery] = useState('');
+  const users = ['Glory', 'chamx', 'david', 'abdul'];
+
+  const filteredItems = users.filter((item) =>
+    item.toLowerCase().includes(query.toLowerCase())
+  );
+
   return (
+    <>
     <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center gap-4 mt-12'>
       <h2 className='font-bold leading-2xl text-4'>Fill in the following input :</h2>
       <input
@@ -45,7 +54,24 @@ const page = () => {
       />
       {errors.password && <span className='text-red'>{errors.password}</span>}
       <button type="submit"  className='bg-inherit text-white rounded-full p-3 border w-[20rem] border-[#333] hover:bg-[#333] focus:none'>Submit</button>
-    </form>
+      </form>
+
+      {/* creating a list that can be filtered based on user input */}
+      <div className='flex flex-col items-center justify-center gap-4 mt-12'>
+      <h2 className='font-bold leading-2xl text-4'>Search for user</h2>
+      <input
+        placeholder="Search..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+           className='bg-inherit text-white rounded-full p-3 border w-[20rem] border-[#333]  focus:none'
+      />
+      <ul>
+        {filteredItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+    </>
   )
 }
 
