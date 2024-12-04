@@ -7,7 +7,7 @@ const page = () => {
       <p className='text-justify py-4'>State is a mutable, local data store managed within a React component, used for dynamic updates.It represents the dynamic data or "state" of the component that can change over time. State is local to the component it is defined in and cannot be directly accessed by child components. State is mutable (can change) and is updated using the setState function (in class components) or useState hook (in functional components). Used for interactivity, dynamic rendering, or any data that needs to change within a component.
       </p>
       <code className='bg-[#333] text-white p-4 block whitespace-pre'>
- {`import React, { useState } from 'react';
+        {`import React, { useState } from 'react';
 
 // Declare a state variable \`count\` and a function \`setCount\` to update it
 const MyComponent = () => {
@@ -26,11 +26,11 @@ export default MyComponent;`}
       <br />
       <br />
       <h1 className='text-bold text-2xl'>Props:</h1>
-      <p  className='text-justify py-4'>
+      <p className='text-justify py-4'>
         Props (short for "properties") are immutable inputs passed from a parent component to a child component. They are used to pass data or configuration. Props are passed down from parent to child components. They are read-only for the child. Props are immutable and cannot be modified by the child component. Used to pass data, event handlers, or configuration between components
       </p>
-    <code className="bg-[#333] text-white p-4 block whitespace-pre">
-{`
+      <code className="bg-[#333] text-white p-4 block whitespace-pre">
+        {`
 // Greeting component: Accepts \`name\` as a prop and displays a personalized message
 const Greeting = ({ name }) => {
   return (
@@ -53,7 +53,7 @@ const App = () => {
 
 export default App; // Exports the App component as the default export
 `}
-</code>
+      </code>
 
     </div>
   )

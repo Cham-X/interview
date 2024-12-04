@@ -17,8 +17,8 @@ const page = () => {
         }
         const result = await response.json();
         setData(result); // Update the data state with the API response
-          setLoading(false); // Update loading state
-          console.log(data)
+        setLoading(false); // Update loading state
+        console.log(data)
       } catch (err) {
         setError(err.message); // Update error state if there's an issue
         setLoading(false);
@@ -33,14 +33,14 @@ const page = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-      <div className='p-16'>
+    <div className='p-16'>
       <h1 className="text-bold text-2xl">API Data</h1>
       <ul>
         {data.map((item) => (
           <li key={item.id}>{item.title}</li> // Display each item's title
         ))}
       </ul>
-      </div>
+    </div>
   )
 }
 
